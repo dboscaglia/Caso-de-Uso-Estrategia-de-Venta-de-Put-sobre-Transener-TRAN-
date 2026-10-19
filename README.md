@@ -1,68 +1,76 @@
-# 📈 Estrategia Cash-Secured Put sobre Transener (TRAN)
+# 📈 Cash-Secured Put sobre Transener (TRAN)
 
-## 📌 Descripción General
-Este repositorio documenta un caso de uso de la estrategia de **venta de opciones Put cubiertas con efectivo** aplicada al activo Transener S.A. (TRAN) en el mercado argentino (BYMA).
+![Mercado](https://img.shields.io/badge/Mercado-BYUMA-blue?style=flat-square)
+![Activo](https://img.shields.io/badge/Activo-TRAN-green?style=flat-square)
+![Estrategia](https://img.shields.io/badge/Estrategia-Cash--Secured%20Put-purple?style=flat-square)
+![Riesgo](https://img.shields.io/badge/Riesgo-Medio--Alto-orange?style=flat-square)
+![Uso](https://img.shields.io/badge/Uso-Educativo-lightgrey?style=flat-square)
 
-La estrategia busca generar ingresos por primas, con el objetivo de adquirir el activo subyacente a un precio efectivo inferior al de mercado, mientras se optimiza el rendimiento del capital mediante instrumentos de corto plazo.
-
----
-
-## 🧾 Estructura del Documento
-
-| **Sección** | **Contenido** |
-|-------------|---------------|
-| `1. Desglose Operativo y Financiero` | Detalle de la operación: strike, prima, breakeven, escenarios. |
-| `2. Ventajas y Riesgos` | Análisis de beneficios y riesgos de la estrategia. |
-| `3. Hoja de Ruta` | Pasos operativos para ejecutar la estrategia correctamente. |
-| `4. Análisis de Resultados` | Indicadores clave de rendimiento. |
+> 📘 Documentación de un caso de uso financiero sobre venta de opciones Put cubiertas con efectivo en el mercado argentino.
 
 ---
 
-## 🎯 Objetivo del Caso de Uso
-- Educar sobre la mecánica de opciones financieras en el mercado local.
-- Ejemplificar el uso de estrategias conservadoras para generación de ingresos.
+## 📑 Tabla de contenidos
+
+- [📌 Descripción general](#-descripción-general)
+- [🎯 Objetivo](#-objetivo)
+- [🧩 Ficha técnica](#-ficha-técnica)
+- [⚙️ Mecánica de la estrategia](#️-mecánica-de-la-estrategia)
+- [📊 Escenarios al vencimiento](#-escenarios-al-vencimiento)
+- [🧮 Punto de equilibrio](#-punto-de-equilibrio)
+- [✅ Ventajas](#-ventajas)
+- [⚠️ Riesgos](#️-riesgos)
+- [🗺️ Hoja de ruta paso a paso](#️-hoja-de-ruta-paso-a-paso)
+- [📈 Métricas clave](#-métricas-clave)
+- [🔁 Salida anticipada](#-salida-anticipada)
+- [🚨 Advertencia de riesgo](#-advertencia-de-riesgo)
+- [📂 Estructura del repositorio](#-estructura-del-repositorio)
+- [🛠️ Cómo usar este repositorio](#️-cómo-usar-este-repositorio)
+- [🤝 Contribuciones](#-contribuciones)
+- [📬 Contacto](#-contacto)
+
+---
+
+## 📌 Descripción general
+
+Este repositorio documenta una estrategia de **venta de un PUT cubierto con efectivo** sobre acciones de **Transener S.A. (TRAN)**.
+
+La estrategia busca:
+
+- 💵 Cobrar una prima inmediata.
+- 🛡️ Generar un margen de seguridad ante caídas del activo.
+- 🎯 Comprar el activo a un precio efectivo menor si la opción se ejerce.
+- 📈 Optimizar el rendimiento del capital reservado con instrumentos de corto plazo.
+
+---
+
+## 🎯 Objetivo
+
+- Educar sobre la mecánica de las opciones financieras en el mercado local.
+- Ejemplificar una estrategia conservadora de generación de ingresos.
 - Destacar la importancia del respaldo en efectivo para mitigar riesgos.
+- Documentar un caso de uso replicable y adaptable.
 
 ---
 
-## 🛠️ Requisitos Previos
-- Cuenta comitente habilitada en una ALyC.
-- Conocimiento básico sobre opciones financieras y mecánica de mercado.
-- Capital disponible para cubrir la eventual compra del activo subyacente.
+## 🧩 Ficha técnica
 
----
+| Parámetro | Valor |
+|---|---|
+| 🏢 Activo subyacente | Transener S.A. (TRAN) |
+| 🏛️ Mercado | BYMA |
+| 📉 Estrategia | Venta de 1 PUT |
+| 📅 Vencimiento | Octubre |
+| 🎯 Strike | $3,800 |
+| 💰 Prima cobrada | $28,000 por lote |
+| 💵 Prima por acción | $280 |
+| 📦 Tamaño del lote | 100 acciones |
+| 🛡️ Capital comprometido | $380,000 |
+| ⚖️ Breakeven | $3,520 por acción |
+| 📈 Rendimiento máximo | 7.36% sobre capital comprometido |
 
-## 📈 Principales Métricas
+**Fórmula del breakeven:**
 
-| **Parámetro** | **Valor** |
-|---------------|-----------|
-| Prima Cobrada | $28,000 |
-| Capital Requerido | $380,000 |
-| Breakeven | $3,520 |
-| Rentabilidad Máxima | 7.36% |
-| Descuento en Compra | 7.3% |
-
----
-
-## ⚠️ Advertencia de Riesgo
-> Esta estrategia no está exenta de riesgos. La caída del activo subyacente puede generar pérdidas significativas. Se recomienda evaluar el perfil de riesgo antes de operar.
-
----
-
-## 📎 Archivos Incluidos
-- `1. Desglose Operativo y Financiero.txt` - Documento detallado del caso de uso.
-
----
-
-## 🤝 Contribuciones
-Si deseas mejorar este material, siéntete libre de realizar un fork y enviar un pull request con tus sugerencias.
-
----
-
-## 📬 Contacto
-Para consultas o asesoramiento, comunicarse con tu agente de bolsa o ALyC de confianza.
-
----
-
-**Última actualización:** Octubre 2026  
-**Autor:** Área de Estrategias Financieras
+```text
+Precio efectivo = Strike − Prima por acción
+Precio efectivo = $3,800 − $280 = $3,520
