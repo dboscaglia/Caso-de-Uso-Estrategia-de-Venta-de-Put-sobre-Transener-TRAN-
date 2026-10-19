@@ -74,3 +74,15 @@ La estrategia busca:
 ```text
 Precio efectivo = Strike − Prima por acción
 Precio efectivo = $3,800 − $280 = $3,520
+                                   PUNTO DE EQUILIBRIO
+                                         $3,520
+  <--- COMPRAS ACCIONES OBLIGADO <------ | ------> CONSERVAS LA PRIMA 100% --->
+-----------------------------------------+-------------------------------------
+3,000                   3,200          3,520          3,800                   4,200
+                                                        (Precio Strike)
+Si TRAN cae a $2,800:
+Pérdida por acción = $3,520 − $2,800 = $720
+Pérdida por lote = $720 × 100 = $72,000
+
+📬 Contacto
+Para consultas o asesoramiento, comunicarse con tu agente de bolsa o ALyC de confianza.
